@@ -1,0 +1,118 @@
+/* Fullscreen background */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(25, 22, 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Game container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Game box styling */
+.game-box {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background-color: rgb(119, 86, 156);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Text */
+h1, h2 {
+  margin: 0;
+  color: rgb(196, 180, 211);
+}
+
+/* Grid board */
+.board {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/* Squares */
+.cell {
+  background-color: #eae4f0;
+  border: 2px solid #333;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* X and O colors */
+.cell.x {
+  color: #ff69b4;
+}
+.cell.o {
+  color: #00bfff;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: rgb(196, 180, 211);
+  color: rgb(25, 22, 34);
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: rgb(180, 160, 200);
+  transform: scale(1.03);
+}
+
+/* Winner popup */
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: white;
+  color: #8e44ad;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+  animation: popUp 0.4s ease-out;
+  z-index: 10;
+}
+
+@keyframes popUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
