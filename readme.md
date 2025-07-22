@@ -1,6 +1,4 @@
-
 # React.js Learning Journey
-
 This repo includes:
 - 💡 Basic React Concepts (`useState`, `useEffect`, props, components)
 - 🛠️ Small Projects (e.g. Counter App, Todo App, Weather App)
